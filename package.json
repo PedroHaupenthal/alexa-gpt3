@@ -1,0 +1,35 @@
+{
+  "name": "alexa-gpt3",
+  "version": "1.0.0",
+  "description": "alexa skill using openai gpt-3",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "lint": "npx eslint \"**/*.{js,jsx}\" --quiet",
+    "lint:fix": "npx eslint \"**/*.{js,jsx}\" --fix",
+    "knex:make": "npx knex --knexfile knexFile.js migrate:make",
+    "knex:migrate": "npx knex --knexfile knexFile.js migrate:latest",
+    "knex:rollback": "npx knex --knexfile knexFile.js migrate:rollback",
+    "knex:makeSeeds": "npx knex --knexfile knexFile.js seed:make",
+    "knex:runSeeds": "npx knex --knexfile knexFile.js seed:run",
+    "test": "npm run spec",
+    "spec": "herbs spec"
+  },
+  "keywords": ["herbs","alexa","gpt3","openai"],
+  "author": "pedrohaupenthal",
+  "license": "MIT",
+  "dependencies": {
+    "@herbsjs/herbs": "^1.6.2",
+    "@herbsjs/herbarium": "^1.4.0",
+    "@herbsjs/herbsshelf": "^4.0.1",
+    "dotenv": "^16.0.1",
+    "deepmerge": "^4.2.2",
+    "nodemon": "^2.0.19",
+    "mocha": "^10.0.0",
+    "lodash.camelcase": "^4.3.0",
+    "sugar-env": "^1.5.14",
+    "@herbsjs/herbs2knex": "^1.5.7",
+    "pg": "^8.7.3"
+  }
+}
